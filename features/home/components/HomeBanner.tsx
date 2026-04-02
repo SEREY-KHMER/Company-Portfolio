@@ -1,41 +1,5 @@
 import { HERO } from "@/features/home/data/home-copy";
 
-function CornerPattern({
-  className,
-  flipY,
-}: {
-  className?: string;
-  flipY?: boolean;
-}) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 220 220"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden
-      style={flipY ? { transform: "scaleY(-1)" } : undefined}
-    >
-      <defs>
-        <pattern id="kbach-corner" width="44" height="44" patternUnits="userSpaceOnUse">
-          <path
-            d="M22 4c8 0 14 6 14 14s-6 14-14 14S8 26 8 18 14 4 22 4Z"
-            stroke="rgba(255,255,255,0.18)"
-            strokeWidth="1"
-          />
-          <path
-            d="M22 12c4 0 6 2 6 6s-2 6-6 6-6-2-6-6 2-6 6-6Z"
-            stroke="rgba(255,255,255,0.12)"
-            strokeWidth="1"
-          />
-        </pattern>
-      </defs>
-      <rect width="220" height="220" fill="url(#kbach-corner)" />
-      <rect width="220" height="220" fill="rgba(55,81,124,0.10)" />
-    </svg>
-  );
-}
-
 function SocialIcon({
   children,
   label,
@@ -61,11 +25,11 @@ export function HomeBanner() {
     <section id="top" className="anchor-target bg-white pb-8 pt-[12px] sm:pb-10 sm:pt-[12px]">
       <div className="mx-auto w-[97.5%]">
         <div className="relative min-h-[calc(97vh-69px)] overflow-hidden rounded-2xl border border-neutral-200/90 bg-brand-navy shadow-sm sm:rounded-3xl">
-          {/* Corner patterns (left) */}
-          <CornerPattern className="pointer-events-none absolute left-0 top-0 h-36 w-36 opacity-75 sm:h-44 sm:w-44" />
-          <CornerPattern
-            className="pointer-events-none absolute bottom-0 left-0 h-36 w-36 opacity-75 sm:h-44 sm:w-44"
-            flipY
+          {/* Corner graphic (top-left) */}
+          <img
+            src="/graphic/bannerCorner.svg"
+            alt=""
+            className="pointer-events-none absolute left-[-5px] top-0 h-[310px] w-[330px] opacity-100"
           />
 
           {/* Social icons (right) */}
