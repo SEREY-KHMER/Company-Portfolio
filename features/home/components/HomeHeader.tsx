@@ -12,18 +12,18 @@ export function HomeHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200/80 bg-white">
-      <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center justify-between gap-3 px-4 sm:h-16 sm:px-6 lg:gap-6 lg:px-8">
+      <div className="mx-auto flex h-[69px] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:gap-6 lg:px-8">
         <a
           href="#top"
-          className="relative flex shrink-0 items-center"
+          className="relative block h-full shrink-0 self-stretch"
           onClick={() => setOpen(false)}
         >
           <Image
             src={logoSrc}
             alt="SEREY KHMER"
-            width={200}
-            height={64}
-            className="h-9 w-auto object-contain object-left sm:h-10"
+            width={280}
+            height={96}
+            className="h-full w-auto max-h-[69px] object-contain object-left"
             priority
           />
         </a>

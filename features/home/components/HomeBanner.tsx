@@ -3,7 +3,7 @@ import { HERO } from "@/features/home/data/home-copy";
 import { HeroDancersArt } from "./HeroDancersArt";
 import { HeroKbachStrip } from "./HeroKbachStrip";
 
-export function HomeHero() {
+export function HomeBanner() {
   return (
     <section id="top" className="bg-white px-4 pb-8 pt-4 sm:px-6 sm:pb-10 sm:pt-6 lg:px-8">
       <div className="mx-auto max-w-7xl">

@@ -2,7 +2,7 @@ import { HomeAdBlock } from "./HomeAdBlock";
 import { HomeContact } from "./HomeContact";
 import { HomeFooter } from "./HomeFooter";
 import { HomeHeader } from "./HomeHeader";
-import { HomeHero } from "./HomeHero";
+import { HomeBanner } from "./HomeBanner";
 import { HomeIntro } from "./HomeIntro";
 import { HomeServices } from "./HomeServices";
 import { HomeStats } from "./HomeStats";
@@ -14,7 +14,7 @@ export function HomePage() {
     <div className="flex min-h-screen flex-col bg-white text-stone-900">
       <HomeHeader />
       <main className="flex-1">
-        <HomeHero />
+        <HomeBanner />
         <HomeIntro />
         <HomeServices />
         <HomeWork />
