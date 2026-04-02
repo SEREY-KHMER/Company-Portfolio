@@ -53,7 +53,7 @@ export function HomeHeader() {
   }, [updateActiveFromScroll]);
 
   return (
-    <header lang="km" className="sticky top-0 z-50 border-b border-neutral-200/80 bg-white">
+    <header lang="km" className="sticky top-0 z-50 bg-white">
       <div className="mx-auto flex h-[69px] max-w-7xl items-center justify-between gap-3 px-1 sm:px-1 lg:gap-6 lg:px-2">
         <a
           href="#top"
