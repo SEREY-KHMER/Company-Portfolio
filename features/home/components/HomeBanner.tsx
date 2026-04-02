@@ -5,7 +5,7 @@ import { HeroKbachStrip } from "./HeroKbachStrip";
 
 export function HomeBanner() {
   return (
-    <section id="top" className="bg-white px-4 pb-8 pt-4 sm:px-6 sm:pb-10 sm:pt-6 lg:px-8">
+    <section id="top" className="anchor-target bg-white px-4 pb-8 pt-4 sm:px-6 sm:pb-10 sm:pt-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="overflow-hidden rounded-2xl border border-neutral-200/90 bg-brand-navy shadow-sm sm:rounded-3xl">
           <div className="flex flex-col lg:min-h-[min(28rem,70vh)] lg:flex-row">

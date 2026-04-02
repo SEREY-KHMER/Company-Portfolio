@@ -3,7 +3,7 @@ import { Container } from "@/shared/components/Container";
 
 export function HomeWork() {
   return (
-    <section id="works" className="border-y border-brand-navy/10 bg-[#f7f4ee] py-12 sm:py-16">
+    <section id="works" className="anchor-target border-y border-brand-navy/10 bg-[#f7f4ee] py-12 sm:py-16">
       <Container>
         <h2 className="mx-auto max-w-4xl whitespace-pre-wrap text-center text-xl font-semibold leading-snug text-brand-navy sm:text-2xl">
           {WORK_SECTION_TITLE}

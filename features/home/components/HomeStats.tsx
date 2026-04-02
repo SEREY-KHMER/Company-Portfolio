@@ -3,7 +3,7 @@ import { Container } from "@/shared/components/Container";
 
 export function HomeStats() {
   return (
-    <section id="about" className="bg-gradient-to-b from-[#faf6ef] to-[#f0ebe3] py-12 sm:py-16">
+    <section id="about" className="anchor-target bg-gradient-to-b from-[#faf6ef] to-[#f0ebe3] py-12 sm:py-16">
       <Container>
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-5xl font-semibold text-brand-navy sm:text-6xl md:text-7xl">

@@ -7,6 +7,14 @@
   --brand-orange: #ef8c10;
   /* Hero Kbach column — slightly lighter than navy */
   --brand-navy-strip: #4a5f85;
+
+  /*
+   * Sticky header height — keep in sync with HomeHeader row (e.g. h-[69px]).
+   * In-page nav (#services, #contact, …) uses scroll-margin so sections aren’t hidden under the bar.
+   * Tweak --anchor-scroll-extra for more/less gap after the jump (e.g. 8px or 12px).
+   */
+  --header-height: 69px;
+  --anchor-scroll-extra: 0px;
 }
 
 /*
@@ -30,4 +38,9 @@ body {
 
 .font-en {
   font-family: var(--font-en), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Sections targeted by header/footer hash links — edit vars above, not random pt/mt per section */
+.anchor-target {
+  scroll-margin-top: calc(var(--header-height) + var(--anchor-scroll-extra));
 }
