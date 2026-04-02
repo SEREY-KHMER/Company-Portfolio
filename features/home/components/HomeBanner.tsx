@@ -47,9 +47,11 @@ function SocialIcon({
     <a
       href="#"
       aria-label={label}
-      className="group inline-flex size-11 items-center justify-center rounded-full border border-white/75 bg-white/0 text-white/95 transition hover:bg-white/10"
+      className="group inline-flex size-11 items-center justify-center rounded-full bg-white text-brand-navy transition hover:bg-white/75"
     >
-      <span className="size-5 opacity-95 group-hover:opacity-100">{children}</span>
+      <span className="size-6 opacity-95 group-hover:opacity-100 [&>svg]:h-full [&>svg]:w-full">
+        {children}
+      </span>
     </a>
   );
 }
@@ -67,7 +69,7 @@ export function HomeBanner() {
           />
 
           {/* Social icons (right) */}
-          <div className="absolute right-4 top-1/2 hidden -translate-y-1/2 flex-col gap-4 md:flex">
+          <div className="absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 flex-col gap-4 md:flex">
             <SocialIcon label="Facebook">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                 <path d="M13.5 22v-8h2.6l.4-3h-3V9.1c0-.9.2-1.5 1.5-1.5H16.6V5a20 20 0 0 0-2.4-.1c-2.4 0-4.1 1.4-4.1 4.1V11H7.5v3h2.6v8h3.4Z" />
@@ -114,7 +116,7 @@ export function HomeBanner() {
 
             <div className="relative flex flex-1 items-center justify-center lg:justify-end">
               {/* Orange mark (approximation) */}
-              <div className="select-none text-[120px] font-black leading-none text-[#EF8C10] drop-shadow-[0_10px_18px_rgba(0,0,0,0.18)] sm:text-[160px] lg:text-[200px]">
+              <div className="pointer-events-none select-none text-[120px] font-black leading-none text-[#EF8C10] drop-shadow-[0_10px_18px_rgba(0,0,0,0.18)] sm:text-[160px] lg:text-[200px]">
                 សិរី
               </div>
             </div>
