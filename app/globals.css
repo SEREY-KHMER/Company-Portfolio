@@ -1,6 +1,24 @@
 @import "tailwindcss";
 
+/* Kantumruy Pro (local) — full font; default body uses this for Khmer + Latin in that face */
+@font-face {
+  font-family: "SereyKhmerText";
+  src: url("/font/KANTUMRUYPRO-VARIABLEFONT_WGHT.TTF") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SereyKhmerText";
+  src: url("/font/KANTUMRUYPRO-ITALIC-VARIABLEFONT_WGHT.TTF") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
+  --font-khmer: "SereyKhmerText", "Noto Sans Khmer", ui-sans-serif, system-ui, sans-serif;
   --background: #ffffff;
   --foreground: #1c1917;
   --brand-navy: #37517c;
@@ -28,16 +46,29 @@
   --color-brand-navy: #37517c;
   --color-brand-orange: #ef8c10;
   --color-brand-navy-strip: #4a5f85;
-  --font-sans: var(--font-khmer), ui-sans-serif, system-ui, sans-serif;
+  /* Default text = Kantumruy (SereyKhmerText). Use font-en or lang="en" for Inter. */
+  --font-sans: "SereyKhmerText", "Noto Sans Khmer", ui-sans-serif, system-ui, sans-serif;
 }
 
+/*
+ * Kantumruy Pro for all default text. Mark English with class font-en or lang="en".
+ * Do not put font-sans on <body> in layout if it overrides this stack.
+ */
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: "SereyKhmerText", "Noto Sans Khmer", ui-sans-serif, system-ui, sans-serif;
 }
 
-.font-en {
+/* English — Inter (next/font on <html> → --font-en) */
+.font-en,
+[lang="en"] {
   font-family: var(--font-en), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Explicit Khmer (same as body; use on wrappers if needed) */
+.font-khmer {
+  font-family: "SereyKhmerText", "Noto Sans Khmer", ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Sections targeted by header/footer hash links — edit vars above, not random pt/mt per section */

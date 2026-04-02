@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Kantumruy_Pro, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const kantumruy = Kantumruy_Pro({
-  variable: "--font-khmer",
-  subsets: ["khmer", "latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-en",
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-en",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,9 +22,9 @@ export default function RootLayout({
   return (
     <html
       lang="km"
-      className={`${kantumruy.variable} ${plusJakarta.variable} h-full scroll-smooth antialiased`}
+      className={`${inter.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

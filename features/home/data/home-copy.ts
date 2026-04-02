@@ -12,7 +12,11 @@ export const HEADER_NAV_ITEMS = [
 export const HEADER_CONTACT_CTA = "ទំនាក់ទំនង";
 
 export const HERO = {
+  /** Mixed headline — split for Khmer (Kantumruy) vs English (Inter) */
   title: "SEREY (សិរី) Means Luck",
+  titleEnBefore: "SEREY ",
+  titleKm: "(សិរី)",
+  titleEnAfter: " Means Luck",
   lines: [
     "We empower your brand to grow,",
     "prosper, and shine like the sun.",

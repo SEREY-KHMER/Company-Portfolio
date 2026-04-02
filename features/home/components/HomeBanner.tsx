@@ -13,9 +13,18 @@ export function HomeBanner() {
               <HeroKbachStrip />
               <div className="flex flex-1 flex-col justify-center gap-5 px-4 py-8 sm:gap-6 sm:px-6 sm:py-10 md:px-8 lg:max-w-xl lg:py-12 lg:pl-4 lg:pr-4">
                 <h1 className="text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">
-                  {HERO.title}
+                  <span lang="en" className="font-en">
+                    {HERO.titleEnBefore}
+                  </span>
+                  <span lang="km">{HERO.titleKm}</span>
+                  <span lang="en" className="font-en">
+                    {HERO.titleEnAfter}
+                  </span>
                 </h1>
-                <div className="space-y-1 font-en text-base font-normal leading-relaxed text-white/95 sm:text-lg md:text-xl">
+                <div
+                  lang="en"
+                  className="space-y-1 font-en text-base font-normal leading-relaxed text-white/95 sm:text-lg md:text-xl"
+                >
                   {HERO.lines.map((line) => (
                     <p key={line}>{line}</p>
                   ))}
@@ -23,6 +32,7 @@ export function HomeBanner() {
                 <div>
                   <a
                     href="#contact"
+                    lang="km"
                     className="inline-flex rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-105 sm:text-base"
                   >
                     {HERO.cta}

@@ -13,7 +13,7 @@ export function HomePage() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-stone-900">
       <HomeHeader />
-      <main className="flex-1">
+      <main lang="km" className="flex-1">
         <HomeBanner />
         <HomeIntro />
         <HomeServices />
