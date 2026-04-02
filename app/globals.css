@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
-/* Kantumruy Pro (local) — full font; default body uses this for Khmer + Latin in that face */
+/* Kantumruy Pro (local, Google Fonts bundle under /font/Kantumruy_Pro) */
 @font-face {
-  font-family: "SereyKhmerText";
-  src: url("/font/KANTUMRUYPRO-VARIABLEFONT_WGHT.TTF") format("truetype");
+  font-family: "Kantumruy Pro";
+  src: url("/font/Kantumruy_Pro/KantumruyPro-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "SereyKhmerText";
-  src: url("/font/KANTUMRUYPRO-ITALIC-VARIABLEFONT_WGHT.TTF") format("truetype");
+  font-family: "Kantumruy Pro";
+  src: url("/font/Kantumruy_Pro/KantumruyPro-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
 
 :root {
-  --font-khmer: "SereyKhmerText", "Noto Sans Khmer", ui-sans-serif, system-ui, sans-serif;
+  --font-khmer: "Kantumruy Pro", "Noto Sans Khmer", ui-sans-serif, system-ui, sans-serif;
   --background: #ffffff;
   --foreground: #1c1917;
   --brand-navy: #37517c;
@@ -46,8 +46,8 @@
   --color-brand-navy: #37517c;
   --color-brand-orange: #ef8c10;
   --color-brand-navy-strip: #4a5f85;
-  /* Default text = Kantumruy (SereyKhmerText). Use font-en or lang="en" for Inter. */
-  --font-sans: "SereyKhmerText", "Noto Sans Khmer", ui-sans-serif, system-ui, sans-serif;
+  /* Default text = Kantumruy Pro. Use font-en or lang="en" for Inter. */
+  --font-sans: "Kantumruy Pro", "Noto Sans Khmer", ui-sans-serif, system-ui, sans-serif;
 }
 
 /*
@@ -57,18 +57,26 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "SereyKhmerText", "Noto Sans Khmer", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-khmer);
 }
 
-/* English — Inter (next/font on <html> → --font-en) */
+/*
+ * English — Inter first; Kantumruy after so Khmer code points still render in Kantumruy Pro
+ * (Inter has no Khmer glyphs; without this fallback, Khmer used inside .font-en would hit system UI).
+ */
 .font-en,
 [lang="en"] {
-  font-family: var(--font-en), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-en), var(--font-khmer);
+}
+
+/* Khmer script — always Kantumruy Pro, including when nested under English/Inter wrappers */
+:lang(km) {
+  font-family: var(--font-khmer);
 }
 
 /* Explicit Khmer (same as body; use on wrappers if needed) */
 .font-khmer {
-  font-family: "SereyKhmerText", "Noto Sans Khmer", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-khmer);
 }
 
 /* Sections targeted by header/footer hash links — edit vars above, not random pt/mt per section */
