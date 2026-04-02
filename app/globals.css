@@ -2,25 +2,32 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1c1917;
+  --brand-navy: #37517c;
+  --brand-orange: #ef8c10;
+  /* Hero Kbach column — slightly lighter than navy */
+  --brand-navy-strip: #4a5f85;
 }
 
+/*
+ * Use literal hex in @theme — not var(--brand-navy). In Tailwind v4, chaining
+ * var() inside @theme inline often fails to resolve, so bg-brand-navy etc. break
+ * and look white/transparent.
+ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: #ffffff;
+  --color-foreground: #1c1917;
+  --color-brand-navy: #37517c;
+  --color-brand-orange: #ef8c10;
+  --color-brand-navy-strip: #4a5f85;
+  --font-sans: var(--font-khmer), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-en {
+  font-family: var(--font-en), ui-sans-serif, system-ui, sans-serif;
 }

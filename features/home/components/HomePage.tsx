@@ -1,11 +1,29 @@
-import { Container } from "@/shared/components/Container";
+import { HomeAdBlock } from "./HomeAdBlock";
+import { HomeContact } from "./HomeContact";
+import { HomeFooter } from "./HomeFooter";
+import { HomeHeader } from "./HomeHeader";
+import { HomeHero } from "./HomeHero";
+import { HomeIntro } from "./HomeIntro";
+import { HomeServices } from "./HomeServices";
+import { HomeStats } from "./HomeStats";
+import { HomeTestimonials } from "./HomeTestimonials";
+import { HomeWork } from "./HomeWork";
 
 export function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <Container className="flex flex-col items-center justify-center py-16 text-center">
-        <p className="text-lg text-zinc-800 dark:text-zinc-200">Hello World</p>
-      </Container>
+    <div className="flex min-h-screen flex-col bg-white text-stone-900">
+      <HomeHeader />
+      <main className="flex-1">
+        <HomeHero />
+        <HomeIntro />
+        <HomeServices />
+        <HomeWork />
+        <HomeAdBlock />
+        <HomeTestimonials />
+        <HomeStats />
+        <HomeContact />
+      </main>
+      <HomeFooter />
     </div>
   );
 }
