@@ -27,10 +27,16 @@ export function HomeBanner() {
         <div className="relative min-h-[calc(97vh-69px)] overflow-hidden rounded-2xl border border-neutral-200/90 bg-brand-navy shadow-sm sm:rounded-3xl">
           {/* Corner graphic (top-left) */}
           <img
-            src="/graphic/bannerCorner.svg"
+            src="/graphic/bannerCornerTopLeft.svg"
             alt=""
             className="pointer-events-none absolute left-[-5px] top-0 h-[310px] w-[330px] opacity-100"
           />
+          <img
+            src="/graphic/bannerCornerBottomLeft.svg"
+            alt=""
+            className="pointer-events-none absolute bottom-0 left-[-5px] h-[310px] w-[330px] opacity-100"
+          />
+          
 
           {/* Social icons (right) */}
           <div className="absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 flex-col gap-4 md:flex">
