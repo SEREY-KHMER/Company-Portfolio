@@ -97,9 +97,9 @@ export const FOOTER_CONTACT_COLUMN_TITLE = "ទាក់ទងមកយើងខ
 
 /** Left column — bold Khmer headline (three lines). */
 export const FOOTER_HEADLINE_LINES = [
-  "រក្សាស្វាយភាពរបស់អ្នក",
-  "ជាមួយយើងខ្ញុំ",
-  "សម្រាប់អនាគតដ៏រុងរឿង",
+  "ទាក់ទងយើងឥឡូវនេះដើម្បី",
+  "ធ្វើការរួមគ្នាឈានទៅរក",
+  "ភាពប្រសើរឡើង",
 ] as const;
 
 export const FOOTER_SOCIAL = {

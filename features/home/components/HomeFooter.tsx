@@ -50,8 +50,8 @@ export function HomeFooter() {
 
         {/* White pill: outside grid so it’s centered on the viewport (full-width flex), not stuck in col 1 */}
         <div className="absolute inset-x-0 top-0 z-30 flex justify-center px-4 sm:px-6 -mt-14 sm:-mt-16">
-          <div className="w-full max-w-[1250px]">
-            <div className="flex h-[100px] w-full items-center justify-between gap-3 rounded-[30px] border-[1px] border-[#2a3f5c] bg-white px-4 shadow-[4px_4px_0_0_#37517C] sm:gap-6 sm:px-10 lg:px-12">
+          <div className="w-full max-w-[1100px]">
+            <div className="flex h-[100px] w-full items-center justify-between gap-3 rounded-[30px] border border-[#2a3f5c] bg-white px-4 shadow-[4px_4px_0_0_#37517C] sm:gap-6 sm:px-10 lg:px-12">
               <a href="#top" className="relative flex min-w-0 shrink items-center">
                 <Image
                   src={logoSrc}
@@ -83,49 +83,49 @@ export function HomeFooter() {
           </div>
         </div>
 
-        {/* Main grid: pt clears the overlapping pill; single row on lg */}
-        <div className="relative z-10 mx-auto grid h-full min-h-0 w-full max-w-[1100px] grid-cols-1 grid-rows-[auto_auto] gap-10 px-4 pb-6 pt-20 sm:px-6 sm:pt-24 lg:grid-cols-[minmax(0,38%)_1px_minmax(0,1fr)] lg:grid-rows-1 lg:gap-x-0 lg:gap-y-0 lg:pt-16">
-          {/* Full-height rule between left CTA column and links + contact */}
-          <div
-            className="pointer-events-none relative z-1 col-start-1 row-start-1 hidden min-h-0 w-px justify-self-center self-stretch bg-white/90 lg:col-start-2 lg:row-start-1 lg:block lg:h-full"
-            aria-hidden
-          />
-
-          {/* Left: headline + CTAs — centered in column on large screens */}
+        {/* Spacer clears the pill; flex-1 + justify-center centers the grid in the navy block (fixes “not in the middle”) */}
+        <div className="relative z-10 flex h-full min-h-0 w-full flex-col">
+          <div className="pointer-events-none shrink-0 pt-20 sm:pt-24 lg:pt-16" aria-hidden />
+          <div className="flex min-h-0 flex-1 flex-col px-4 pb-8 sm:px-6">
+            <div className="mx-auto grid min-h-0 w-full max-w-[1100px] flex-1 grid-cols-1 grid-rows-[auto_auto] gap-10 lg:grid-cols-[minmax(0,38%)_minmax(0,1fr)] lg:grid-rows-[minmax(0,1fr)] lg:gap-x-0 lg:gap-y-0 lg:items-stretch">
+          {/* Full-height vertical rule — border on left column (reliable vs. empty 1px track with no node) */}
+          {/* Left: same horizontal inset as white pill (pl matches bar px) so headline lines up with logo */}
           <div
             lang="km"
-            className="row-start-1 flex min-h-0 flex-col items-center justify-center space-y-8 text-center lg:col-start-1 lg:row-start-1 lg:h-full"
+            className="row-start-1 flex h-full min-h-0 w-full flex-col items-start justify-center pr-2 text-left lg:col-start-1 lg:row-start-1 lg:border-r lg:border-white lg:pr-4"
           >
-            <h2 className="text-2xl font-bold leading-snug tracking-tight sm:text-3xl lg:text-[34px] lg:leading-tight">
-              {FOOTER_HEADLINE_LINES.map((line, i) => (
-                <span key={line}>
-                  {i > 0 ? <br /> : null}
-                  {line}
-                </span>
-              ))}
-            </h2>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-full bg-zinc-100 px-7 py-3 text-sm font-bold text-brand-navy shadow-sm transition hover:bg-zinc-50 sm:text-base"
-                lang="km"
-              >
-                {HERO.cta}
-              </a>
-              <a
-                href="#contact"
-                aria-label={HEADER_CONTACT_CTA}
-                className="inline-flex size-12 items-center justify-center rounded-full bg-zinc-100 text-zinc-900 shadow-sm transition hover:bg-zinc-50"
-              >
-                <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
+            <div className="flex w-full max-w-xl flex-col items-start gap-8 text-start">
+              <h2 className="w-full text-start text-[40px] font-semibold leading-snug tracking-tight lg:leading-tight">
+                {FOOTER_HEADLINE_LINES.map((line, i) => (
+                  <span key={line}>
+                    {i > 0 ? <br /> : null}
+                    {line}
+                  </span>
+                ))}
+              </h2>
+              <div className="flex flex-wrap items-center justify-start gap-3">
+                <a
+                  href="#contact"
+                  className="inline-flex h-[75px] w-[275px] max-w-full shrink-0 items-center justify-center rounded-[180px] bg-linear-to-r from-[rgb(255_255_255/0.75)] from-0% to-[#FFFFFF] to-100% text-[25px] font-semibold leading-tight text-brand-navy shadow-[inset_4px_4px_0_0_#37517C] transition hover:brightness-[1.02]"
+                  lang="km"
+                >
+                  {HERO.cta}
+                </a>
+                <a
+                  href="#contact"
+                  aria-label={HEADER_CONTACT_CTA}
+                  className="inline-flex size-12 items-center justify-center rounded-full bg-zinc-100 text-zinc-900 shadow-sm transition hover:bg-zinc-50"
+                >
+                  <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Right: links + contact — two sub-columns, no second vertical rule (target UI) */}
-          <div className="row-start-2 flex min-h-0 flex-col justify-center pt-10 lg:col-start-3 lg:row-start-1 lg:h-full lg:pt-0 lg:pl-8 lg:pr-2">
+          <div className="row-start-2 flex min-h-0 flex-col justify-center pt-10 lg:col-start-2 lg:row-start-1 lg:h-full lg:pt-0 lg:pl-8 lg:pr-2">
             <div className="flex w-full flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center sm:gap-10 lg:gap-14 xl:gap-20">
               <div lang="km" className="w-full max-w-[240px] text-left">
                 <p className="text-lg font-bold text-white">{FOOTER_QUICK_LINKS_TITLE}</p>
@@ -229,6 +229,8 @@ export function HomeFooter() {
                   </SocialCircle>
                 </div>
               </div>
+            </div>
+          </div>
             </div>
           </div>
         </div>
