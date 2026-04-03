@@ -38,10 +38,10 @@ function SocialCircle({
 
 export function HomeFooter() {
   return (
-    <footer className="w-full bg-brand-navy text-white mt-25">
+    <footer className="w-full bg-brand-navy text-white mt-[150px]">
       {/* Main footer only — watermark stays inside this block (not in copyright strip) */}
       {/* overflow visible so negative-margin pill isn’t clipped (was showing only ~bottom half) */}
-      <div className="relative h-[550px] w-full overflow-visible">
+      <div className="relative h-[525px] w-full overflow-visible">
         <img
           src="/graphic/footerBottomRight.svg"
           alt=""
@@ -50,8 +50,8 @@ export function HomeFooter() {
 
         {/* White pill: outside grid so it’s centered on the viewport (full-width flex), not stuck in col 1 */}
         <div className="absolute inset-x-0 top-0 z-30 flex justify-center px-4 sm:px-6 -mt-14 sm:-mt-16">
-          <div className="w-full max-w-[1100px]">
-            <div className="flex h-[100px] w-full items-center justify-between gap-3 rounded-[30px] border-[1px] border-[#2a3f5c] bg-white px-4 shadow-[6px_6px_0_0_#1a2333] sm:gap-6 sm:px-10 lg:px-12">
+          <div className="w-full max-w-[1250px]">
+            <div className="flex h-[100px] w-full items-center justify-between gap-3 rounded-[30px] border-[1px] border-[#2a3f5c] bg-white px-4 shadow-[4px_4px_0_0_#37517C] sm:gap-6 sm:px-10 lg:px-12">
               <a href="#top" className="relative flex min-w-0 shrink items-center">
                 <Image
                   src={logoSrc}

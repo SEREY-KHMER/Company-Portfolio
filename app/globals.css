@@ -61,6 +61,20 @@ body {
 }
 
 /*
+ * Hide the default window scrollbar (the “sidebar” track on the right).
+ * Scrolling still works with mouse wheel, trackpad, touch, and keyboard.
+ */
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*
  * English — Inter first; Kantumruy after so Khmer code points still render in Kantumruy Pro
  * (Inter has no Khmer glyphs; without this fallback, Khmer used inside .font-en would hit system UI).
  */
