@@ -151,7 +151,7 @@ export function HomeFooter() {
                 <div className="space-y-4 text-sm text-white/95 sm:text-base">
                   <p className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-white/90" aria-hidden>
-                      <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="size-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -170,7 +170,7 @@ export function HomeFooter() {
                   </p>
                   <p className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-white/90" aria-hidden>
-                      <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="size-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -189,7 +189,7 @@ export function HomeFooter() {
                   </p>
                   <div className="flex gap-3">
                     <span className="mt-1 shrink-0 text-white/90" aria-hidden>
-                      <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="size-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
