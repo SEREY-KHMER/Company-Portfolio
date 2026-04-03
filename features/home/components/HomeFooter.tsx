@@ -103,7 +103,7 @@ export function HomeFooter() {
                   </span>
                 ))}
               </h2>
-              <div className="flex flex-wrap items-center justify-start gap-3">
+              <div className="flex flex-wrap items-center justify-start">
                 <a
                   href="#contact"
                   className="inline-flex h-[75px] w-[275px] max-w-full shrink-0 items-center justify-center rounded-[180px] bg-linear-to-r from-[rgb(255_255_255/0.75)] from-0% to-[#FFFFFF] to-100% text-[25px] font-semibold leading-tight text-brand-navy shadow-[inset_4px_4px_0_0_#37517C] transition hover:brightness-[1.02]"
@@ -114,7 +114,7 @@ export function HomeFooter() {
                 <a
                   href="#contact"
                   aria-label={HEADER_CONTACT_CTA}
-                  className="inline-flex size-12 items-center justify-center rounded-full bg-zinc-100 text-zinc-900 shadow-sm transition hover:bg-zinc-50"
+                  className="inline-flex h-[75px] w-[75px] items-center justify-center rounded-full bg-linear-to-r from-[rgb(255_255_255/0.75)] from-0% via-[rgb(255_255_255/0.88)] via-[53%] to-[#FFFFFF] to-100% text-zinc-900 shadow-sm"
                 >
                   <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
