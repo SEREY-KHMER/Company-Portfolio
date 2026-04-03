@@ -3,14 +3,18 @@ import { HERO } from "@/features/home/data/home-copy";
 function SocialIcon({
   children,
   label,
+  href = "#",
 }: {
   children: React.ReactNode;
   label: string;
+  href?: string;
 }) {
+  const external = href.startsWith("http");
   return (
     <a
-      href="#"
+      href={href}
       aria-label={label}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className="group inline-flex size-11 items-center justify-center rounded-full bg-white text-brand-navy transition hover:bg-white/75"
     >
       <span className="size-6 opacity-95 group-hover:opacity-100 [&>svg]:h-full [&>svg]:w-full">
@@ -74,12 +78,15 @@ export function HomeBanner() {
 
             <div className="hidden justify-center md:flex lg:self-center">
               <div className="flex flex-col items-center gap-4">
-                <SocialIcon label="Facebook">
+                <SocialIcon
+                  label="Facebook"
+                  href="https://www.facebook.com/profile.php?id=61578485984250"
+                >
                   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                     <path d="M13.5 22v-8h2.6l.4-3h-3V9.1c0-.9.2-1.5 1.5-1.5H16.6V5a20 20 0 0 0-2.4-.1c-2.4 0-4.1 1.4-4.1 4.1V11H7.5v3h2.6v8h3.4Z" />
                   </svg>
                 </SocialIcon>
-                <SocialIcon label="TikTok">
+                <SocialIcon label="TikTok" href="https://www.tiktok.com/@sereykhmer.co">
                   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                     <path d="M15.7 5.1c.7 1.2 1.8 2 3.3 2.2v3.1c-1.6-.1-3-.6-4.2-1.6v6.4c0 3.2-2.6 5.8-5.8 5.8S3.2 18.4 3.2 15.2s2.6-5.8 5.8-5.8c.4 0 .8 0 1.2.1v3.2a2.7 2.7 0 0 0-1.2-.3c-1.5 0-2.8 1.2-2.8 2.8S7.5 18 9 18s2.8-1.2 2.8-2.8V3.1h3c.2.7.5 1.4.9 2Z" />
                   </svg>
