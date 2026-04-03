@@ -67,7 +67,7 @@ export function HomeFooter() {
 									className="h-14 w-auto max-w-[min(100%,270px)] object-contain object-left sm:h-[68px] sm:max-w-none md:h-[80px]"
 								/>
 							</a>
-							<div className="flex shrink-0 items-center justify-end gap-2 sm:gap-4">
+							<div className="flex shrink-0 items-center justify-end">
 								<a
 									href="#contact"
 									lang="km"
@@ -78,7 +78,7 @@ export function HomeFooter() {
 								<a
 									href={FOOTER_SOCIAL.telegram}
 									aria-label="Telegram"
-									className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-navy text-white shadow-[inset_0_3px_4px_rgba(0,0,0,0.25)] transition hover:brightness-110 sm:size-12"
+									className="inline-flex h-[57px] w-[75px] shrink-0 items-center justify-center rounded-[180px] bg-linear-to-r from-[#37517C] from-0% to-[rgb(55_81_124/0.75)] to-100% text-white transition hover:brightness-110"
 								>
 									<span className="sr-only">Telegram</span>
 									<svg
@@ -332,7 +332,7 @@ export function HomeFooter() {
 					<p
 						lang="en"
 						className={cn(
-							"text-left text-xs leading-none text-white/80 sm:text-sm",
+							"text-left text-[15px] font-medium leading-none text-white sm:text-sm",
 							"font-en",
 						)}
 					>
