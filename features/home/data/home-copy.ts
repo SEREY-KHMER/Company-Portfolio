@@ -90,14 +90,26 @@ export const CONTACT_SECTION = {
   ],
 };
 
-export const FOOTER_NAV = [
-  "ទពរម",
-  "សេវកម",
-  "សដៃ",
-  "អពង",
-  "ទនក ទនង",
-  "ទក ទងមកងខ",
-];
+/** Footer quick links use the same anchors as the header (`#top`, `#services`, …). */
+export const FOOTER_QUICK_LINKS_TITLE = "តំណភ្ជាប់";
+
+export const FOOTER_CONTACT_COLUMN_TITLE = "ទាក់ទងមកយើងខ្ញុំ";
+
+/** Left column — bold Khmer headline (three lines). */
+export const FOOTER_HEADLINE_LINES = [
+  "រក្សាស្វាយភាពរបស់អ្នក",
+  "ជាមួយយើងខ្ញុំ",
+  "សម្រាប់អនាគតដ៏រុងរឿង",
+] as const;
+
+export const FOOTER_SOCIAL = {
+  facebook: "https://www.facebook.com/profile.php?id=61578485984250",
+  tiktok: "https://www.tiktok.com/@sereykhmer.co",
+  /** Replace with your channel when ready */
+  youtube: "#",
+  /** Replace with your Telegram when ready */
+  telegram: "#",
+} as const;
 
 export const FOOTER_CONTACT = {
   email: "sereykhmer.kh@gmail.com",

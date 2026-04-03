@@ -1,13 +1,7 @@
-import { HomeAdBlock } from "./HomeAdBlock";
-import { HomeContact } from "./HomeContact";
+
 import { HomeFooter } from "./HomeFooter";
 import { HomeHeader } from "./HomeHeader";
 import { HomeBanner } from "./HomeBanner";
-import { HomeIntro } from "./HomeIntro";
-import { HomeServices } from "./HomeServices";
-import { HomeStats } from "./HomeStats";
-import { HomeTestimonials } from "./HomeTestimonials";
-import { HomeWork } from "./HomeWork";
 
 export function HomePage() {
   return (
@@ -15,13 +9,6 @@ export function HomePage() {
       <HomeHeader />
       <main lang="km" className="flex-1">
         <HomeBanner />
-        <HomeIntro />
-        <HomeServices />
-        <HomeWork />
-        <HomeAdBlock />
-        <HomeTestimonials />
-        <HomeStats />
-        <HomeContact />
       </main>
       <HomeFooter />
     </div>
