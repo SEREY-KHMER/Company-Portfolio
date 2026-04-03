@@ -74,7 +74,7 @@ export function HomeFooter() {
                   aria-label="Telegram"
                   className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-navy text-white shadow-[inset_0_3px_4px_rgba(0,0,0,0.25)] transition hover:brightness-110 sm:size-12"
                 >
-                  <svg className="size-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <svg className="size-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M20.6 4.6 2.9 11.8c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.7 5.1c.2.6.1.8.7.8.4 0 .6-.2.9-.4l2.2-2.1 4.6 3.4c.8.5 1.4.2 1.6-.7l3-14.1c.3-1.1-.4-1.6-1.4-1.1Zm-2.4 3.1-8.8 7.9-.3 3.3-1.2-3.9 10.4-6.6c.5-.3.9-.1.6.3Z" />
                   </svg>
                 </a>
@@ -116,7 +116,9 @@ export function HomeFooter() {
                   aria-label={HEADER_CONTACT_CTA}
                   className="inline-flex h-[75px] w-[75px] items-center justify-center rounded-full bg-linear-to-r from-[rgb(255_255_255/0.75)] from-0% via-[rgb(255_255_255/0.88)] via-[53%] to-[#FFFFFF] to-100% text-zinc-900 shadow-sm"
                 >
+                  <span className="sr-only">{HEADER_CONTACT_CTA}</span>
                   <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
+                    <title>{HEADER_CONTACT_CTA}</title>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </a>
@@ -150,7 +152,7 @@ export function HomeFooter() {
                 <div className="space-y-4 text-sm text-white/95 sm:text-base">
                   <p className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-white/90" aria-hidden>
-                      <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -169,7 +171,7 @@ export function HomeFooter() {
                   </p>
                   <p className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-white/90" aria-hidden>
-                      <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -188,7 +190,7 @@ export function HomeFooter() {
                   </p>
                   <div className="flex gap-3">
                     <span className="mt-1 shrink-0 text-white/90" aria-hidden>
-                      <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -208,22 +210,22 @@ export function HomeFooter() {
 
                 <div className="flex flex-wrap gap-3 pt-2">
                   <SocialCircle href={FOOTER_SOCIAL.facebook} label="Facebook">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M13.5 22v-8h2.6l.4-3h-3V9.1c0-.9.2-1.5 1.5-1.5H16.6V5a20 20 0 0 0-2.4-.1c-2.4 0-4.1 1.4-4.1 4.1V11H7.5v3h2.6v8h3.4Z" />
                     </svg>
                   </SocialCircle>
                   <SocialCircle href={FOOTER_SOCIAL.tiktok} label="TikTok">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M15.7 5.1c.7 1.2 1.8 2 3.3 2.2v3.1c-1.6-.1-3-.6-4.2-1.6v6.4c0 3.2-2.6 5.8-5.8 5.8S3.2 18.4 3.2 15.2s2.6-5.8 5.8-5.8c.4 0 .8 0 1.2.1v3.2a2.7 2.7 0 0 0-1.2-.3c-1.5 0-2.8 1.2-2.8 2.8S7.5 18 9 18s2.8-1.2 2.8-2.8V3.1h3c.2.7.5 1.4.9 2Z" />
                     </svg>
                   </SocialCircle>
                   <SocialCircle href={FOOTER_SOCIAL.youtube} label="YouTube">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1 31.6 31.6 0 0 0 .5-5.8 31.6 31.6 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12 9.6 15.6z" />
                     </svg>
                   </SocialCircle>
                   <SocialCircle href={FOOTER_SOCIAL.telegram} label="Telegram">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M20.6 4.6 2.9 11.8c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.7 5.1c.2.6.1.8.7.8.4 0 .6-.2.9-.4l2.2-2.1 4.6 3.4c.8.5 1.4.2 1.6-.7l3-14.1c.3-1.1-.4-1.6-1.4-1.1Zm-2.4 3.1-8.8 7.9-.3 3.3-1.2-3.9 10.4-6.6c.5-.3.9-.1.6.3Z" />
                     </svg>
                   </SocialCircle>
