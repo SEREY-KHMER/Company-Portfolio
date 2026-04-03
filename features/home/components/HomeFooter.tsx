@@ -110,7 +110,7 @@ export function HomeFooter() {
               <div className="flex flex-wrap items-center justify-start">
                 <a
                   href="#contact"
-                  className="inline-flex h-[75px] w-[275px] max-w-full shrink-0 items-center justify-center rounded-[180px] bg-linear-to-r from-[rgb(255_255_255/0.75)] from-0% to-[#FFFFFF] to-100% text-[25px] font-semibold leading-tight text-brand-navy shadow-[inset_4px_4px_0_0_#37517C] transition hover:brightness-[1.02]"
+                  className="inline-flex h-[75px] w-[275px] max-w-full shrink-0 items-center justify-center rounded-[180px] bg-linear-to-r from-[rgb(255_255_255/0.75)] from-0% to-[#FFFFFF] to-100% text-[25px] font-semibold leading-tight text-brand-navy shadow-[inset_0_0_0_0_#37517C] transition hover:brightness-[1.02]"
                   lang="km"
                 >
                   {HERO.cta}
@@ -131,28 +131,23 @@ export function HomeFooter() {
           </div>
 
           {/* Right: links + contact — two sub-columns, no second vertical rule (target UI) */}
-          <div className="row-start-2 flex min-h-0 flex-col justify-center pt-10 lg:col-start-2 lg:row-start-1 lg:h-full lg:pt-0 lg:pl-8 lg:pr-2">
-            <div className="flex w-full flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center sm:gap-10 lg:gap-14 xl:gap-20">
+          <div className="row-start-2 flex min-h-0 flex-col justify-center pt-10915 pl-[56px] lg:col-start-2 lg:row-start-1 lg:h-full lg:pt-0 lg:pl-[120px] lg:pr-2">
+            <div className="flex w-full flex-col items-center sm:flex-row sm:items-start sm:justify-center">
               <div lang="km" className="w-full max-w-[240px] text-left">
-                <p className="text-lg font-bold text-white">{FOOTER_QUICK_LINKS_TITLE}</p>
+                <p className="text-[25px] font-semibold text-white">{FOOTER_QUICK_LINKS_TITLE}</p>
                 <ul className="mt-5 space-y-3 text-sm text-white/95 sm:text-base">
                   {HEADER_NAV_ITEMS.map((item) => (
                     <li key={item.id}>
-                      <a href={`#${item.id}`} className="transition hover:text-white hover:underline">
+                      <a href={`#${item.id}`} className="text-[18px] font-medium transition hover:text-white hover:underline">
                         {item.label}
                       </a>
                     </li>
                   ))}
-                  <li>
-                    <a href="#contact" className="transition hover:text-white hover:underline">
-                      {HEADER_CONTACT_CTA}
-                    </a>
-                  </li>
                 </ul>
               </div>
 
               <div lang="km" className="w-full max-w-sm space-y-5 text-left">
-                <p className="text-lg font-bold text-white">{FOOTER_CONTACT_COLUMN_TITLE}</p>
+                <p className="text-[25px] font-semibold text-white">{FOOTER_CONTACT_COLUMN_TITLE}</p>
                 <div className="space-y-4 text-sm text-white/95 sm:text-base">
                   <p className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-white/90" aria-hidden>
