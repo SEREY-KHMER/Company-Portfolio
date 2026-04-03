@@ -40,7 +40,8 @@ export function HomeFooter() {
   return (
     <footer className="bg-brand-navy text-white mt-25">
       {/* Main footer only — watermark stays inside this block (not in copyright strip) */}
-      <div className="relative h-[450px] overflow-hidden">
+      {/* overflow visible so negative-margin pill isn’t clipped (was showing only ~bottom half) */}
+      <div className="relative h-[550px] overflow-visible">
         <img
           src="/graphic/footerBottomRight.svg"
           alt=""
@@ -48,19 +49,53 @@ export function HomeFooter() {
         />
 
         {/* Pill row + content row; divider column spans both so the line sits on the navy (behind the white pill) */}
-        <div className="relative z-10 mx-auto grid h-full min-h-0 w-full max-w-6xl grid-cols-1 grid-rows-[auto_auto_auto] gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,40%)_1px_minmax(0,1fr)] lg:grid-rows-[auto_minmax(0,1fr)] lg:gap-x-0 lg:gap-y-0">
+        <div className="relative z-10 mx-auto grid h-full min-h-0 w-full max-w-[1100px] grid-cols-1 grid-rows-[auto_auto_auto] gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,38%)_1px_minmax(0,1fr)] lg:grid-rows-[auto_minmax(0,1fr)] lg:gap-x-0 lg:gap-y-0">
+          {/* Single full-height rule (~40%): left CTA vs links + contact — matches target UI */}
           <div
-            className="pointer-events-none relative z-1 col-start-1 row-start-1 hidden min-h-0 w-px justify-self-center self-stretch bg-white/55 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:block"
+            className="pointer-events-none relative z-1 col-start-1 row-start-1 hidden min-h-0 w-px justify-self-center self-stretch bg-white/90 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:block"
             aria-hidden
           />
 
-          {/* Overlapping top bar — white pill */}
-          <div className="relative z-20 col-start-1 row-start-1 -mt-14 mb-10 sm:-mt-16 lg:col-span-3">
-
+          {/* Overlapping top bar — white pill: 1100px max, centered in the layout */}
+          <div className="relative z-20 col-start-1 row-start-1 -mt-14 mb-10 w-full sm:-mt-16 lg:col-span-3">
+            <div className="relative mx-auto w-full max-w-[1100px]">
+              <div className="flex h-[100px] w-full items-center justify-between gap-3 rounded-full border-2 border-[#2a3f5c] bg-white px-4 shadow-[6px_6px_0_0_#1a2333] sm:gap-6 sm:px-10 lg:px-12">
+                <a href="#top" className="relative flex min-w-0 shrink items-center">
+                  <Image
+                    src={logoSrc}
+                    alt="SEREY KHMER"
+                    width={220}
+                    height={72}
+                    className="h-10 w-auto max-w-[min(100%,200px)] object-contain object-left sm:h-[52px] sm:max-w-none md:h-14"
+                  />
+                </a>
+                <div className="flex shrink-0 items-center justify-end gap-2 sm:gap-4">
+                  <a
+                    href="#contact"
+                    lang="km"
+                    className="inline-flex h-10 items-center justify-center rounded-full bg-brand-navy px-4 text-xs font-bold leading-tight text-white shadow-[inset_0_3px_4px_rgba(0,0,0,0.25)] transition hover:brightness-110 sm:h-12 sm:px-8 sm:text-base"
+                  >
+                    {HERO.cta}
+                  </a>
+                  <a
+                    href={FOOTER_SOCIAL.telegram}
+                    aria-label="Telegram"
+                    className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-navy text-white shadow-[inset_0_3px_4px_rgba(0,0,0,0.25)] transition hover:brightness-110 sm:size-12"
+                  >
+                    <svg className="size-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                      <path d="M20.6 4.6 2.9 11.8c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.7 5.1c.2.6.1.8.7.8.4 0 .6-.2.9-.4l2.2-2.1 4.6 3.4c.8.5 1.4.2 1.6-.7l3-14.1c.3-1.1-.4-1.6-1.4-1.1Zm-2.4 3.1-8.8 7.9-.3 3.3-1.2-3.9 10.4-6.6c.5-.3.9-.1.6.3Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Left: headline + CTAs */}
-          <div lang="km" className="row-start-2 space-y-8 lg:col-start-1 lg:row-start-2 lg:pt-2">
+          {/* Left: headline + CTAs — centered in column on large screens */}
+          <div
+            lang="km"
+            className="row-start-2 flex min-h-0 flex-col items-center justify-center space-y-8 text-center lg:col-start-1 lg:row-start-2 lg:h-full"
+          >
             <h2 className="text-2xl font-bold leading-snug tracking-tight sm:text-3xl lg:text-[34px] lg:leading-tight">
               {FOOTER_HEADLINE_LINES.map((line, i) => (
                 <span key={line}>
@@ -69,10 +104,10 @@ export function HomeFooter() {
                 </span>
               ))}
             </h2>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-3">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-full bg-white/95 px-7 py-3 text-sm font-bold text-brand-navy shadow-sm transition hover:bg-white sm:text-base"
+                className="inline-flex items-center justify-center rounded-full bg-zinc-100 px-7 py-3 text-sm font-bold text-brand-navy shadow-sm transition hover:bg-zinc-50 sm:text-base"
                 lang="km"
               >
                 {HERO.cta}
@@ -80,19 +115,19 @@ export function HomeFooter() {
               <a
                 href="#contact"
                 aria-label={HEADER_CONTACT_CTA}
-                className="inline-flex size-12 items-center justify-center rounded-full bg-white/95 text-brand-navy shadow-sm transition hover:bg-white"
+                className="inline-flex size-12 items-center justify-center rounded-full bg-zinc-100 text-zinc-900 shadow-sm transition hover:bg-zinc-50"
               >
-                <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
             </div>
           </div>
 
-          {/* Right: quick links + contact (vertical rule is the grid column that spans pill + this row) */}
-          <div className="row-start-3 pt-10 lg:col-start-3 lg:row-start-2 lg:pt-0 lg:pl-12">
-            <div className="grid gap-10 sm:grid-cols-2 sm:gap-x-10 lg:gap-x-12">
-              <div lang="km">
+          {/* Right: links + contact — two sub-columns, no second vertical rule (target UI) */}
+          <div className="row-start-3 flex min-h-0 flex-col justify-center pt-10 lg:col-start-3 lg:row-start-2 lg:h-full lg:pt-0 lg:pl-8 lg:pr-2">
+            <div className="flex w-full flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center sm:gap-10 lg:gap-14 xl:gap-20">
+              <div lang="km" className="w-full max-w-[240px] text-left">
                 <p className="text-lg font-bold text-white">{FOOTER_QUICK_LINKS_TITLE}</p>
                 <ul className="mt-5 space-y-3 text-sm text-white/95 sm:text-base">
                   {HEADER_NAV_ITEMS.map((item) => (
@@ -110,7 +145,7 @@ export function HomeFooter() {
                 </ul>
               </div>
 
-              <div lang="km" className="space-y-5 border-t border-white/25 pt-10 sm:border-t-0 sm:pt-0">
+              <div lang="km" className="w-full max-w-sm space-y-5 text-left">
                 <p className="text-lg font-bold text-white">{FOOTER_CONTACT_COLUMN_TITLE}</p>
                 <div className="space-y-4 text-sm text-white/95 sm:text-base">
                   <p className="flex gap-3">
