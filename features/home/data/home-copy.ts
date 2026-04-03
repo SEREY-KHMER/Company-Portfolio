@@ -115,8 +115,7 @@ export const FOOTER_CONTACT = {
   email: "sereykhmer.kh@gmail.com",
   phone: "+855 12 345 678",
   addressLines: [
-    "ផវលេខ១២៣ 	ភមទកកក ឃទកឃ",
-    "សងតស្រះត្រ 	រជធនភពេញ",
+    "ផ្លូវលេខ១២៣ ភូមិទឹកកក ឃុំទឹកឃ្មុំ សង្កាត់ស្រះត្រី រាជធានីភ្នំពេញ",
   ],
   copyright: "Copyright 2026, SEREY KHMER All Right Reserved.",
 };
