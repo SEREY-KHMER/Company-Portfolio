@@ -51,7 +51,7 @@ export function HomeFooter() {
         {/* White pill: outside grid so it’s centered on the viewport (full-width flex), not stuck in col 1 */}
         <div className="absolute inset-x-0 top-0 z-30 flex justify-center px-4 sm:px-6 -mt-14 sm:-mt-16">
           <div className="w-full max-w-[1100px]">
-            <div className="flex h-[100px] w-full items-center justify-between gap-3 rounded-full border-2 border-[#2a3f5c] bg-white px-4 shadow-[6px_6px_0_0_#1a2333] sm:gap-6 sm:px-10 lg:px-12">
+            <div className="flex h-[100px] w-full items-center justify-between gap-3 rounded-[30px] border-[1px] border-[#2a3f5c] bg-white px-4 shadow-[6px_6px_0_0_#1a2333] sm:gap-6 sm:px-10 lg:px-12">
               <a href="#top" className="relative flex min-w-0 shrink items-center">
                 <Image
                   src={logoSrc}
