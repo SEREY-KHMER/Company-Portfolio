@@ -56,9 +56,9 @@ export function HomeFooter() {
                 <Image
                   src={logoSrc}
                   alt="SEREY KHMER"
-                  width={220}
-                  height={72}
-                  className="h-10 w-auto max-w-[min(100%,200px)] object-contain object-left sm:h-[52px] sm:max-w-none md:h-14"
+                  width={300}
+                  height={98}
+                  className="h-14 w-auto max-w-[min(100%,270px)] object-contain object-left sm:h-[68px] sm:max-w-none md:h-[80px]"
                 />
               </a>
               <div className="flex shrink-0 items-center justify-end gap-2 sm:gap-4">
