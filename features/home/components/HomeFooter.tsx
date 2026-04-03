@@ -65,7 +65,7 @@ export function HomeFooter() {
                 <a
                   href="#contact"
                   lang="km"
-                  className="inline-flex h-10 items-center justify-center rounded-full bg-brand-navy px-4 text-xs font-bold leading-tight text-white shadow-[inset_0_3px_4px_rgba(0,0,0,0.25)] transition hover:brightness-110 sm:h-12 sm:px-8 sm:text-base"
+                  className="inline-flex h-[60px] w-[275px] max-w-full shrink-0 items-center justify-center rounded-full bg-linear-to-r from-[#37517C] from-0% to-[rgb(55_81_124/0.75)] to-100% px-4 text-[25px] font-semibold leading-tight text-white shadow-[inset_4px_4px_0_0_#37517C] transition hover:brightness-110"
                 >
                   {HERO.cta}
                 </a>
