@@ -42,10 +42,13 @@ export function HomeFooter() {
       {/* Main footer only — watermark stays inside this block (not in copyright strip) */}
       {/* overflow visible so negative-margin pill isn’t clipped (was showing only ~bottom half) */}
       <div className="relative h-[525px] w-full overflow-visible">
-        <img
+        <Image
           src="/graphic/footerBottomRight.svg"
           alt=""
-          className="pointer-events-none absolute bottom-0 right-0 z-0 max-h-[min(55vh,520px)] w-auto max-w-[min(90vw,420px)] select-none"
+          width={420}
+          height={520}
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-auto max-h-[min(55vh,520px)] max-w-[min(90vw,420px)] select-none"
         />
 
         {/* White pill: outside grid so it’s centered on the viewport (full-width flex), not stuck in col 1 */}
@@ -74,6 +77,7 @@ export function HomeFooter() {
                   aria-label="Telegram"
                   className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-navy text-white shadow-[inset_0_3px_4px_rgba(0,0,0,0.25)] transition hover:brightness-110 sm:size-12"
                 >
+                  <span className="sr-only">Telegram</span>
                   <svg className="size-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M20.6 4.6 2.9 11.8c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.7 5.1c.2.6.1.8.7.8.4 0 .6-.2.9-.4l2.2-2.1 4.6 3.4c.8.5 1.4.2 1.6-.7l3-14.1c.3-1.1-.4-1.6-1.4-1.1Zm-2.4 3.1-8.8 7.9-.3 3.3-1.2-3.9 10.4-6.6c.5-.3.9-.1.6.3Z" />
                   </svg>
