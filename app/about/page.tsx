@@ -1,5 +1,5 @@
-import { AboutPage } from "@/features/about";
+import { AboutPage } from "../../features/about";
 
-export default function About() {
+export default function AboutRoute() {
   return <AboutPage />;
 }

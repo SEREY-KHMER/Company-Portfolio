@@ -1,7 +1,10 @@
-
+import { HomeAbout } from "./HomeAbout";
+import { HomeAdvertisers } from "./HomeAdvertisers";
+import { HomeBanner } from "./HomeBanner";
 import { HomeFooter } from "./HomeFooter";
 import { HomeHeader } from "./HomeHeader";
-import { HomeBanner } from "./HomeBanner";
+import { HomeServices } from "./HomeServices";
+import { HomeWorks } from "./HomeWorks";
 
 export function HomePage() {
   return (
@@ -9,6 +12,10 @@ export function HomePage() {
       <HomeHeader />
       <main lang="km" className="flex-1">
         <HomeBanner />
+        <HomeServices />
+        <HomeWorks />
+        <HomeAdvertisers />
+        <HomeAbout />
       </main>
       <HomeFooter />
     </div>

@@ -1,19 +1,15 @@
 import { HomeFooter } from "../../home/components/HomeFooter";
 import { HomeHeader } from "../../home/components/HomeHeader";
-import { AboutBanner } from "./AboutBanner";
-import { AboutDescription } from "./AboutDescription";
-import { AboutPartners } from "./AboutPartners";
-import { AboutTeam } from "./AboutTeam";
+import { AdvertiserBanner } from "./AdvertiserBanner";
+import { AdvertiserGrid } from "./AdvertiserGrid";
 
-export function AboutPage() {
+export function AdvertiserPage() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-stone-900">
       <HomeHeader />
       <main lang="km" className="flex-1">
-        <AboutBanner />
-        <AboutDescription />
-        <AboutPartners />
-        <AboutTeam />
+        <AdvertiserBanner />
+        <AdvertiserGrid />
       </main>
       <HomeFooter />
     </div>
