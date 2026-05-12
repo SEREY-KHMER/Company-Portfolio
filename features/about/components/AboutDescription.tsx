@@ -39,7 +39,7 @@ export function AboutDescription() {
                 src="/graphic/banerunder.svg"
                 alt=""
                 aria-hidden="true"
-                className="pointer-events-none absolute bottom-0 left-0 h-[80px] w-[80px] rotate-170 select-none"
+                className="pointer-events-none absolute bottom-0 left-0 h-[80px] w-[80px] rotate-360 select-none"
               />
 
               {/* Content */}
